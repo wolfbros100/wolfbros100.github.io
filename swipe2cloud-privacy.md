@@ -4,149 +4,134 @@ permalink: /swipe2cloud/privacy/
 
 # Privacy Policy — Swipe2Cloud
 
-**Effective date:** 2026-04-23
-**Version:** 1.0
+**Effective date:** 2026-11-20
+**Version:** 1.1
 **Developer:** Wolf Bros — wolfbros.100@gmail.com
 
 ---
 
-## 1. Introduction
+## 1. In short
 
-Swipe2Cloud ("the app", "we", "our") is an Android application that allows you to back up photos from your device to your own Google Drive account by swiping. This Privacy Policy explains what data the app accesses, how it is used, and your rights regarding that data.
+Swipe2Cloud is an Android app for sorting the photos and videos on your phone: swipe right to back an item up to **your own Google Drive**, swipe left to mark it for removal. Your photos and videos go straight from your phone to your Google Drive. The developer never receives them, and has no server of its own.
 
-By using Swipe2Cloud, you agree to the practices described in this policy.
+The only thing that can ever reach the developer is a **crash report**, and only if you say yes to sending them (section 4).
 
----
-
-## 2. What Data We Access
-
-### 2.1 Photos and Videos
-
-The app requests access to photos and videos stored on your device. This access is used solely to display your media library within the app so you can select photos for backup by swiping right.
-
-- Photos and videos are **not uploaded to any developer-controlled server**.
-- Selected photos are uploaded directly to **your own Google Drive account** via the Google Drive API.
-- If you grant partial access, only the photos you selected are shown. The app does not require full access to function.
-
-### 2.2 Google Account (OAuth Token)
-
-To connect to Google Drive, the app uses Google's OAuth authentication. The resulting access token is:
-
-- Stored **locally on your device** using the Android Credential Manager (backed by Android Keystore).
-- Used **only** to authenticate requests to the Google Drive API on your behalf.
-- **Never transmitted to or accessed by the developer.**
-
-### 2.3 Upload Queue Data
-
-The app maintains a local database of photos you have queued for upload, including file references and upload status (pending, uploaded, failed).
-
-- This data is stored **locally on your device** only.
-- It is **never transmitted to the developer** or any third party.
-- It contains no photo content — only file references and status metadata.
+See also the [Terms of Use](/swipe2cloud/terms/).
 
 ---
 
-## 3. How We Use Your Data
+## 2. What the app uses on your phone
 
-| Data | How it is used |
-|------|---------------|
-| Photos and videos | Displayed in the app UI; uploaded to your own Google Drive on your request via swipe gesture |
-| OAuth access token | Maintains your authenticated session with Google Drive API |
-| Upload queue metadata | Tracks which photos you have queued and their current upload status |
+### 2.1 Photos and videos
 
-We do not use your data for advertising, analytics, profiling, or any purpose other than providing the upload functionality described above.
+The app asks for access to the photos and videos on your phone, so it can show them to you one by one. If you allow access only to selected items, the app shows only those.
+
+- Items you swipe right are uploaded to a folder you choose in **your own Google Drive**.
+- Items you swipe left are never uploaded. When you finish, the app offers to move the items you sorted to your phone's **system trash**. This always goes through an Android confirmation dialog that you must approve; the app cannot delete anything on its own.
+
+### 2.2 Google sign-in and Google Drive
+
+You sign in with Google and allow the app to use Google Drive with the `drive.file` permission. With it, the app can see **only the files and folders it created itself** — nothing else in your Drive.
+
+- The app does not keep your password or a Google access token on the phone. When it needs to talk to Drive, it asks Android's Google services for a short-lived permission each time.
+- The app does not store your email address.
+
+### 2.3 What the app keeps on the phone
+
+To work, the app keeps a small amount of data **on your phone only**:
+
+- the list of items waiting to upload and their status;
+- the Drive folder you chose (its ID and name);
+- your settings (for example Wi-Fi-only uploads, video sound, crash reports on or off);
+- whether you have agreed to this policy and the Terms, and to which version;
+- how many items you have sorted in the free daily allowance, and when it started.
+
+None of this is sent to the developer. It is deleted when you clear the app's data (Android Settings → Apps → Swipe2Cloud → Storage → Clear data) or uninstall the app.
+
+### 2.4 What the app adds in your Google Drive
+
+For each uploaded file, the app saves a checksum (a SHA-256 fingerprint of the file's content) as a hidden property of that file in your Drive. It uses it to recognise a file that is already there, so the same photo is not uploaded twice. It stays in your Drive with the file.
 
 ---
 
-## 4. Data Sharing
+## 3. Who receives your data
 
-### 4.1 Google (Google Drive API)
-
-Photos you select for backup are uploaded to your own Google Drive account using the Google Drive API. This upload is initiated by your swipe gesture.
-
-- The upload destination is your personal Google Drive — not a developer-controlled server.
-- Google's own [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms) govern data stored in Google Drive.
-- Google processes this data under its [Data Processing Terms](https://cloud.google.com/terms/data-processing-addendum) and uses Standard Contractual Clauses (SCCs) for EU-US data transfers.
-
-### 4.2 No Other Third Parties
-
-No other third party receives any data from this version of the app. The app does not include:
-
-- Analytics or crash reporting SDKs
-- Advertising networks
-- Social media integrations
-- Any backend service operated by the developer
-
----
-
-## 5. Data Retention
-
-| Data | Retention period |
+| Data | Who receives it |
 |------|-----------------|
-| Photos and videos | Not stored by the app. Accessed at time of upload only. |
-| OAuth access token | Retained until you sign out or clear app data. |
-| Upload queue metadata | Retained until you uninstall the app or clear app data via Android Settings → Apps → Swipe2Cloud → Clear Data. |
-| Data in Google Drive | You control your own Google Drive. Deletion of uploaded photos is your responsibility, managed directly in Google Drive. |
+| Photos and videos you upload | **Google**, as the provider of your own Google Drive. Never the developer. |
+| Crash reports (only if you agree) | **Google**, through Firebase Crashlytics, on behalf of the developer. See section 4. |
+| Everything else in section 2.3 | **Nobody.** It stays on your phone. |
+
+Your Google Drive is governed by Google's own [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms).
+
+The app contains no advertising, no usage analytics and no social media integrations. Your data is not sold or used for advertising.
 
 ---
 
-## 6. Data Security
+## 4. Crash reports
 
-- All data transmitted to Google Drive is encrypted in transit using **HTTPS (TLS)**.
-- OAuth tokens are stored using the **Android Keystore** — system-level hardware-backed encryption.
-- Local upload queue data is stored in a standard SQLite database and is **not encrypted at rest**.
-- The app does not transmit any data to developer-controlled infrastructure.
+When you first open the app, it asks whether to send crash reports. **They are off unless you tap "Send reports".** You can turn them on or off at any time in the app's **Settings → Send crash reports**.
 
----
+If you agree, then when something goes wrong in the app, a report is sent to **Firebase Crashlytics**, a Google service the developer uses to find and fix problems.
 
-## 7. Your Rights (GDPR)
+**A report contains:**
 
-If you are located in the European Economic Area (EEA), you have the following rights regarding your personal data:
+- what went wrong in the app: the type of error and where in the app's code it happened;
+- your phone's model and Android version, and the app's version;
+- a random ID for this installation of the app, used to count how many installations a problem affects;
+- for a few known problems, counts and categories — for example whether an item was a photo or a video, a rough size range (such as "under 10 MB"), or the general shape of a file name (its length range, the kinds of characters in it, and its extension if it is a common photo or video extension).
 
-**Right of access:** Upload queue data (file references and upload status) is visible within the app.
+As with any internet connection, the report reaches Google from your phone's **IP address**.
 
-**Right to erasure:** All local data stored by the app can be deleted at any time by:
-- Going to Android Settings → Apps → Swipe2Cloud → Clear Data, or
-- Uninstalling the app.
+**A report never contains:** your photos or videos, file or folder names, your Google account or email address, or the text of error messages (which could contain such details — the app removes it before a report is sent).
 
-For data you have uploaded to Google Drive, deletion is managed directly in your Google Drive account.
+**Retention:** Google keeps crash reports and the installation ID for **90 days**, after which they are deleted.
 
-**Right to data portability:** Upload queue data is stored locally on your device and is accessible through standard Android data management.
-
-**Response timeframe:** We will respond to data rights requests within 30 days.
-
-**Cross-border transfers:** Photo uploads are processed by Google's infrastructure in the United States and other regions. Google uses Standard Contractual Clauses (SCCs) approved by the European Commission for these transfers. See [Google's Data Processing Terms](https://cloud.google.com/terms/data-processing-addendum) for details.
+**Legal basis:** your consent (GDPR Art. 6(1)(a)). You can withdraw it at any time in Settings; reports stop from that moment. Withdrawing does not affect reports already sent, which are deleted after 90 days. Because a report does not contain anything that identifies you, the developer cannot find a particular person's reports.
 
 ---
 
-## 8. International Data Transfers
+## 5. Security
 
-This app uploads photos to Google Drive via the Google Drive API. Google operates globally and your data may be processed in countries outside your country of residence, including the United States.
-
-Google LLC has implemented Standard Contractual Clauses (SCCs) as a lawful transfer mechanism for EU personal data. Details are available in [Google's Privacy Policy](https://policies.google.com/privacy) and [Data Processing Terms](https://cloud.google.com/terms/data-processing-addendum).
-
----
-
-## 9. Children's Privacy
-
-This app is not directed at children under the age of 13. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has used this app, please contact us at wolfbros.100@gmail.com and we will take appropriate action.
+- All data the app sends — to Google Drive and to Crashlytics — is encrypted in transit (HTTPS/TLS).
+- The data the app keeps on the phone (section 2.3) is protected by Android's app sandbox, so other apps cannot read it. It is not additionally encrypted by the app.
 
 ---
 
-## 10. Changes to This Policy
+## 6. International transfers
 
-We will notify you of material changes to this Privacy Policy by:
-- Updating the "Effective date" at the top of this document, and
-- Displaying an in-app notice or updating the Play Store listing.
-
-Continued use of the app after changes take effect constitutes acceptance of the updated policy.
+Google may process uploaded files and crash reports in countries outside your own, including the United States. Google uses the European Commission's Standard Contractual Clauses for such transfers; see Google's [Privacy Policy](https://policies.google.com/privacy).
 
 ---
 
-## 11. Contact
+## 7. Your rights
 
-For privacy-related questions or data deletion requests, contact:
+If you are in the European Economic Area, you have the right to access, correct and delete your personal data, to restrict or object to its processing, to data portability, and to withdraw consent at any time.
 
-**Email:** wolfbros.100@gmail.com
+In practice:
 
-We will respond within 30 days.
+- **Data on your phone:** you control it fully — see and change your settings in the app, and delete everything by clearing the app's data or uninstalling it.
+- **Files in your Google Drive:** you manage them in Google Drive. You can also remove the app's access in your Google Account → Security → Third-party apps & services.
+- **Crash reports:** turn them off in Settings. Sent reports are deleted after 90 days.
+
+You also have the right to complain to a data protection authority. In Lithuania this is the State Data Protection Inspectorate (Valstybinė duomenų apsaugos inspekcija, [vdai.lrv.lt](https://vdai.lrv.lt)); you may also contact the authority in your own country.
+
+We answer requests sent to the email below within 30 days.
+
+---
+
+## 8. Children
+
+The app is not directed at children under 14. We do not knowingly collect personal data from children. If you believe a child has sent us data, contact us and we will delete what we can.
+
+---
+
+## 9. Changes to this policy
+
+When this policy changes in a way that matters, the version and date above are updated, and the app shows you what changed and asks you to agree again before you continue.
+
+---
+
+## 10. Contact
+
+**Wolf Bros** — wolfbros.100@gmail.com
