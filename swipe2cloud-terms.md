@@ -4,8 +4,8 @@ permalink: /swipe2cloud/terms/
 
 # Terms of Use — Swipe2Cloud
 
-**Effective date:** 2026-07-13
-**Version:** 1.0
+**Effective date:** 2026-11-21
+**Version:** 1.0.1 (corrects how long Android keeps trashed items, section 4; nothing else changed)
 **Developer:** Wolf Bros — wolfbros.100@gmail.com
 
 ---
@@ -42,7 +42,7 @@ To use the app you need:
 
 This app's core purpose is removing photos from your device after they are backed up. You must understand and accept the following:
 
-- Photos are moved to the **Android system trash**, not deleted immediately. The operating system keeps trashed items for a limited period (approximately 30 days, controlled by Android, not by the app), during which you can restore them using your device's gallery or Files app.
+- Photos are moved to the **Android system trash**, not deleted immediately. The operating system keeps trashed items for a limited period set by Android, not by the app — according to Android's documentation, typically 30 days; on some phones it may differ. During that period you can restore them, for example in your device's gallery or Files app.
 - After that period the operating system **permanently deletes** trashed items. Recovery is then impossible.
 - Every move-to-trash operation requires your explicit confirmation in an Android system dialog. The app cannot and does not delete photos silently.
 - The app verifies uploads cryptographically (SHA-256 checksum comparison against Google Drive) before offering uploaded photos for removal. Nevertheless, **you are responsible for verifying that your photos are safely in your Google Drive before confirming removal and before emptying the system trash.**
