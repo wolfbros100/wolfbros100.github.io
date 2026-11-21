@@ -18,7 +18,7 @@ What can reach the developer:
 
 - a **crash report**, and only if you say yes to sending them (section 4);
 - what you choose to send: an **email**, or a **review** on Google Play (section 3.1);
-- if you join a test of the app, the **email address** you joined the test with (section 3.1);
+- if you join a test of the app, possibly the **email address** you joined the test with (section 3.1);
 - **statistics from Google Play** that do not identify you (section 3.1).
 
 An earlier version of this policy (1.1) said that only crash reports can reach the developer. That was incomplete; this version corrects it.
@@ -80,7 +80,7 @@ The app contains no advertising, no usage analytics and no social media integrat
 
 **Reviews.** A review you post on Google Play is shown to the developer in Google Play's developer console with the name Google Play shows for you. The developer can reply to it there. Google Play decides how reviews are published and kept.
 
-**Tests.** If you join a test of the app (for example a closed test on Google Play), the developer can see the email address you joined with, as Google Play needs it to give you the test version. It is used only to run the test (Art. 6(1)(f)) and removed from the test list when the test ends or when you ask.
+**Tests.** If you join a test of the app (for example a closed test on Google Play), the developer may see the email address you joined with — for example when testers are invited by email. It is used only to run the test (Art. 6(1)(f)); ask, and it is removed from the developer's test list.
 
 **Statistics.** Google Play shows the developer figures that do not identify you, such as installs per country and app crashes per phone model, which Android collects if you allowed it in your phone's settings.
 
