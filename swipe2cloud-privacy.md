@@ -4,8 +4,8 @@ permalink: /swipe2cloud/privacy/
 
 # Privacy Policy — Swipe2Cloud
 
-**Effective date:** 2026-11-20
-**Version:** 1.1
+**Effective date:** 2026-11-21
+**Version:** 1.1.1 (corrects section 1 and adds section 3.1; the app itself has not changed)
 **Developer:** Wolf Bros — wolfbros.100@gmail.com
 
 ---
@@ -14,7 +14,14 @@ permalink: /swipe2cloud/privacy/
 
 Swipe2Cloud is an Android app for sorting the photos and videos on your phone: swipe right to back an item up to **your own Google Drive**, swipe left to mark it for removal. Your photos and videos go straight from your phone to your Google Drive. The developer never receives them, and has no server of its own.
 
-The only thing that can ever reach the developer is a **crash report**, and only if you say yes to sending them (section 4).
+What can reach the developer:
+
+- a **crash report**, and only if you say yes to sending them (section 4);
+- what you choose to send: an **email**, or a **review** on Google Play (section 3.1);
+- if you join a test of the app, possibly the **email address** you joined the test with (section 3.1);
+- **statistics from Google Play** that do not identify you (section 3.1).
+
+An earlier version of this policy (1.1) said that only crash reports can reach the developer. That was incomplete; this version corrects it.
 
 See also the [Terms of Use](/swipe2cloud/terms/).
 
@@ -60,11 +67,22 @@ For each uploaded file, the app saves a checksum (a SHA-256 fingerprint of the f
 |------|-----------------|
 | Photos and videos you upload | **Google**, as the provider of your own Google Drive. Never the developer. |
 | Crash reports (only if you agree) | **Google**, through Firebase Crashlytics, on behalf of the developer. See section 4. |
+| Emails you send, reviews you post, the email address you joined a test with | **The developer**. See section 3.1. |
 | Everything else in section 2.3 | **Nobody.** It stays on your phone. |
 
 Your Google Drive is governed by Google's own [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms).
 
 The app contains no advertising, no usage analytics and no social media integrations. Your data is not sold or used for advertising.
+
+### 3.1 Emails, reviews, tests and Google Play statistics
+
+**Emails.** If you write to the developer, the developer receives your email address and what you write, and uses it only to answer you (legitimate interest in answering, GDPR Art. 6(1)(f)). It is kept as long as needed to settle the matter. If the message is a complaint or a claim, it is kept, with the reply, until a legal claim about it can no longer be brought (Art. 6(1)(f): legitimate interest in establishing or defending legal claims).
+
+**Reviews.** A review you post on Google Play is shown to the developer in Google Play's developer console with the name Google Play shows for you. The developer can reply to it there. Google Play decides how reviews are published and kept.
+
+**Tests.** If you join a test of the app (for example a closed test on Google Play), the developer may see the email address you joined with — for example when testers are invited by email. It is used only to run the test (Art. 6(1)(f)); ask, and it is removed from the developer's test list.
+
+**Statistics.** Google Play shows the developer figures that do not identify you, such as installs per country and app crashes per phone model, which Android collects if you allowed it in your phone's settings.
 
 ---
 
